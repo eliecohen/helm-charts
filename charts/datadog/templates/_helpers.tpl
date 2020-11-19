@@ -197,3 +197,14 @@ true
 false
 {{- end -}}
 {{- end -}}
+
+{{/*
+Return true if the system-probe container should be created.
+*/}}
+{{- define "image-path" -}}
+{{- if .image.repository -}}
+{{- .image.repository -}}:{{ .image.tag }}
+{{- else -}}
+{{ .root.registry }}/{{ .image.name }}:{{ .image.tag }}
+{{- end -}}
+{{- end -}}
