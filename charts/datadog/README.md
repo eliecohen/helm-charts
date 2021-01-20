@@ -1,6 +1,6 @@
 # Datadog
 
-![Version: 2.6.10](https://img.shields.io/badge/Version-2.6.10-informational?style=flat-square) ![AppVersion: 7](https://img.shields.io/badge/AppVersion-7-informational?style=flat-square)
+![Version: 2.6.11](https://img.shields.io/badge/Version-2.6.11-informational?style=flat-square) ![AppVersion: 7](https://img.shields.io/badge/AppVersion-7-informational?style=flat-square)
 
 [Datadog](https://www.datadoghq.com/) is a hosted infrastructure monitoring platform. This chart adds the Datadog Agent to all nodes in your cluster via a DaemonSet. It also optionally depends on the [kube-state-metrics chart](https://github.com/kubernetes/charts/tree/master/stable/kube-state-metrics). For more information about monitoring Kubernetes with Datadog, please refer to the [Datadog documentation website](https://docs.datadoghq.com/agent/basic_agent_usage/kubernetes/).
 
@@ -465,6 +465,7 @@ helm install --name <RELEASE_NAME> \
 | datadog.hostVolumeMountPropagation | string | `"None"` | Allow to specify the `mountPropagation` value on all volumeMounts using HostPath |
 | datadog.kubeStateMetricsEnabled | bool | `true` | If true, deploys the kube-state-metrics deployment |
 | datadog.kubeStateMetricsNetworkPolicy.create | bool | `false` | If true, create a NetworkPolicy for kube state metrics |
+| datadog.kubelet.kubelet_host | string | `nil` | Override kubelet IP |
 | datadog.leaderElection | bool | `false` | Enables leader election mechanism for event collection |
 | datadog.leaderLeaseDuration | string | `nil` | Set the lease time for leader election in second |
 | datadog.logLevel | string | `"INFO"` | Set logging verbosity, valid log levels are: trace, debug, info, warn, error, critical, off |

@@ -1,5 +1,9 @@
 # Datadog changelog
 
+## 2.6.11
+
+* Add a new field `datadog.kubelet.kubelet_host` to override `DD_KUBERNETES_KUBELET_HOST`
+
 ## 2.6.10
 
 * Allow cluster-agent to access apps/daemonsets when admissionController is enabled.
