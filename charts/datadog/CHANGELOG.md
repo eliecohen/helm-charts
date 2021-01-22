@@ -1,5 +1,9 @@
 # Datadog changelog
 
+## 2.6.13
+
+* Add `ports` options to all Agent containers to allow users to add any binding they'd like for integrations
+
 ## 2.6.12
 
 * Mount `/etc/passwd` as `readOnly` in the `process-agent`.
